@@ -4,21 +4,7 @@
 
 <div class="card-details">
 <%= simple_form_for [@game, @transaction] do |f| %>
-  <%= f.label "Cardholder's name" %>
-  <%= f.input_field :username %>
-  <%= f.hint 'Ronaldo Nazário de Lima' %>
 
-  <%= f.label "Card Number" %>
-  <%= f.input_field :username %>
-  <%= f.hint '9870 6065 1245 6766' %>
-
-  <%= f.label "Expiry Date" %>
-  <%= f.input_field :username %>
-  <%= f.hint '06/12' %>
-
-  <%= f.label "CVC" %>
-  <%= f.input_field :username %>
-  <%= f.hint '327' %>
 
   <%= f.button :submit, value: "PAY"%>
 <% end %>
