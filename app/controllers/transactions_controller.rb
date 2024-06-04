@@ -5,6 +5,10 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
+<<<<<<< HEAD
+
+
+=======
   def create
     @transaction = Transaction.new(transaction_params)
     @transaction.game = @game
@@ -25,4 +29,5 @@ class TransactionsController < ApplicationController
   def set_game
     @game = Game.find(params[@game])
   end
+>>>>>>> master
 end

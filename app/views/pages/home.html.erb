@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div>
+    <h1>BUY NOW!</h1>
+    <p>Check our new offers and best prices</p>
+  </div>
+  <div>
+      <h2>Best Sellers</h2>
+      <% @games.each do |game| %>
+        <p>
+          <%= game.title %>
+          <%= game.category %>
+          <%= "$#{game.price}" %>
+          <%= link_to "GO", game_path(@game), class:"btn btn-primary" %>
+        </p>
+      <% end %>
+  </div>
+
+  <h2>Bargains</h2>
+</div>
+<%= render "navbar"%>
