@@ -1,1 +1,13 @@
-<h1>  transactions </h1>
+<h1>Let's pay</h1>
+<h3>To purchase your game please fill the fields below.</h3>
+
+<div>
+<p><%= @game.title %></p>
+<p><%= @game.category %></p>
+<p><%= @game.price %></p>
+
+</div>
+
+<%= simple_form_for [@game, @transaction] do |f| %>
+  <%= f.button :submit, value: "PAY"%>
+<% end %>
