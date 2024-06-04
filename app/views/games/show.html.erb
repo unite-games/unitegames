@@ -2,4 +2,6 @@
 
 <div class="co">
 <li><%= @game.title %></li>
+<%= link_to "BUY NOW", new_game_transaction_path(@game) %>
 </div>
+<%= link_to "BACK", root_path%>
