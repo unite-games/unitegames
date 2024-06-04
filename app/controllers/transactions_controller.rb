@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  before_action :set_game, only: [:new, :create]
+  before_action :set_game, only: [:show]
 
   def new
     @transaction = Transaction.new
@@ -20,5 +20,9 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:datetime, :game_id, :user_id)
+  end
+
+  def set_game
+    @game = Game.find(params[@game])
   end
 end
