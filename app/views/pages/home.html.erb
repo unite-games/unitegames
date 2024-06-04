@@ -1,16 +1,17 @@
-<div class="container">
-  <div>
-    <h1>BUY NOW!</h1>
-    <p>Check our new offers and best prices</p>
-  </div>
-  <div>
-      <h2>Best Sellers</h2>
+<div class="container bg-black">
+
+  <div class="d-flex flex-column justify-content-center ">
+    <h1 class="text-white fw-bold">BUY NOW!</h1>
+    <p class="text-white">Check our new offers and best prices</p>
+    </div>
+    <div>
+      <h2 class="text-white">Best Sellers</h2>
       <% @games.each do |game| %>
-        <p>
-          <%= game.title %>
-          <%= game.category %>
+          <p class="text-white"><%= game.title %></p>
+          <p class="text-green"><%= game.category %></p>
+        <p class="text-white">
           <%= "$#{game.price}" %>
-          <%= link_to "GO", game_path(game), class:"btn btn-primary" %>
+          <%= link_to "GO", game_path(game), class:"btn btn-primary btn" %>
         </p>
       <% end %>
   </div>

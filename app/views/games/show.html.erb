@@ -1,6 +1,7 @@
  <h1>---show---</h1>
 
-<div class="co">
-<%= @game.title %>
-<%= link_to "BUY NOW", new_game_transaction_path(@game)  %>
-</div>
+<div class="container">
+  <li><%= @game.title %></li>
+  <%= link_to "BUY NOW", new_game_transaction_path(@game) %>
+  <%= link_to "BACK", root_path%>
+ </div>
