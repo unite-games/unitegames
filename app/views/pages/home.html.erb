@@ -10,7 +10,8 @@
           <%= game.title %>
           <%= game.category %>
           <%= "$#{game.price}" %>
-          <%= link_to "GO", game_path(@game), class:"btn btn-primary" %>
+          <%= link_to "GO", game_path(game), class:"btn btn-primary" %>
+
         </p>
       <% end %>
   </div>
