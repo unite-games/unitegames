@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  before_action :set_game, only: [:show]
+  before_action :set_game, only: [:new, :create]
 
   def new
     @transaction = Transaction.new
