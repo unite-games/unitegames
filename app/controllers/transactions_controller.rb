@@ -6,20 +6,16 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = Transaction.new
     @transaction.game = @game
-    @transaction.user_id = current_user.id
+    @transaction.user = current_user
     if @transaction.save
       # order was saved
-      redirect_to "pages#home", notice: 'Your order was successfully created!'
+      redirect_to game_path(@game), notice: 'Your order was successfully created!'
     else
-      # deu ruim, não salvou por erro de validação
+      # erro happened while saving the order
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def transaction_params
-    params.require(:transaction).permit(:datetime, :game_id, :user_id)
   end
 
   def set_game
