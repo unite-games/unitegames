@@ -4,7 +4,6 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
-  def create
-   
-  end
+
+
 end

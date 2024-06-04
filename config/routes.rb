@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :games, only: [:show]
+  resources :games, only: [:show, :new , :create]
   resources :transactions, only: [:new , :create]
   devise_for :users
   root to: "pages#home"
