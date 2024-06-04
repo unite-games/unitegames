@@ -3,11 +3,6 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
-<<<<<<< HEAD
-
-
-=======
   def create
   end
->>>>>>> master
 end
