@@ -1,5 +1,7 @@
-<h1> New Games </h1>
 
+
+<div class="container">
+<h1> New Games </h1>
 <%= form_with model: @game do |form| %>
   <div>
     <%= form.label :title %><br>
@@ -20,3 +22,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
