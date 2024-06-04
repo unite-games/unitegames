@@ -1,5 +1,6 @@
  <h1>---show---</h1>
 
 <div class="co">
-<li><%= @game.title %></li>
+<%= @game.title %>
+<%= link_to "BUY NOW", new_game_transaction_path(@game)  %>
 </div>
