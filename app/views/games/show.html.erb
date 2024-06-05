@@ -1,7 +1,14 @@
- <h1>---show---</h1>
-
-<div class="container">
-  <li><%= @game.title %></li>
-  <%= link_to "BUY NOW", new_game_transaction_path(@game) %>
-  <%= link_to "BACK", root_path%>
- </div>
+<div class="container w-50 my-5">
+ <h1><%= @game.title %></h1>
+ <h3><%= @game.price %></h3>
+ <p><%= @game.category %></p>
+ <p>Seller: <%= @game.user.name %></p>
+  <%= cl_image_tag @game.photo.key, class:"image" %>
+  <br>
+  <br>
+  <%= link_to "Return to the main page", root_path%>
+  <br>
+  <br>
+  <br>
+  <%= link_to "BUY NOW", new_game_transaction_path(@game), class:"button_buy" %>
+</div>
