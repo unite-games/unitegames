@@ -5,15 +5,11 @@
   </div>
     <div>
       <h2 class="text-white">Best Sellers</h2>
-      <% @games.each do |game| %>
-          <p class="text-white"><%= game.title %></p>
-          <p class="text-green"><%= game.category %></p>
-        <p class="text-white">
-          <%= "$#{game.price}" %>
-          <%= link_to "GO", game_path(game), class:"btn btn-primary btn" %>
-        </p>
-      <% end %>
+      <%= render "card"%>
   </div>
+
+
+
 
   <h2>Bargains</h2>
 </div>
