@@ -1,0 +1,15 @@
+<div Class= "games d-flex align-content-start flex-wrap justify-content-evenly">
+ <% @games.each do |game| %>
+ <div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" Class= />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%=game.title%></h2>
+      <p><%=game.category%></p>
+    </div>
+    <h2 class="card-trip-pricing">£<%=game.price%></h2>
+    <%= link_to "GO", game_path(game), class:"btn btn-primary btn" %>
+  </div>
+</div>
+<% end %>
+</div>
