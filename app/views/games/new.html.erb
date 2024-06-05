@@ -1,25 +1,12 @@
-
-
 <div class="container">
-<h1> New Games </h1>
-<%= form_with model: @game do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :category %><br>
-    <%= form.text_area :category %>
-  </div>
-
-   <div>
-    <%= form.label :price %><br>
-    <%= form.text_area :price %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+<h1> Sell your game  </h1>
+<%= simple_form_for @game do |f| %>
+  <%= f.input :title %>
+  <%= f.input  :category %>
+  <%= f.input  :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
 <% end %>
+<%= link_to "BACK", root_path%>
+
 </div>
