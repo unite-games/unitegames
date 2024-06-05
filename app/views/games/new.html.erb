@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container w-50 my-5">
 <h1> Sell your game  </h1>
 <%= simple_form_for @game do |f| %>
   <%= f.input :title %>
   <%= f.input  :category %>
   <%= f.input  :price %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class:"button-form"%>
 <% end %>
 <%= link_to "BACK", root_path%>
 
