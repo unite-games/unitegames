@@ -1,9 +1,8 @@
 <div class="container bg-black">
 
-  <div class="d-flex flex-column justify-content-center ">
-    <h1 class="text-white fw-bold">BUY NOW!</h1>
-    <p class="text-white">Check our new offers and best prices</p>
-    </div>
+  <div class="text-center mt-3">
+    <%= render "carousel" %>
+  </div>
     <div>
       <h2 class="text-white">Best Sellers</h2>
       <% @games.each do |game| %>
@@ -18,4 +17,4 @@
 
   <h2>Bargains</h2>
 </div>
-<%= render "navbar"%>
+<%= render "footer"%>
