@@ -1,0 +1,26 @@
+.button-all {
+  background-color: greenyellow;
+  color: #111010;
+}
+
+.button-login {
+  background:  #0f0f0f; // Degradê
+  color: #BCFB23; // Texto preto
+  border-radius: 10px; // Borda arredondada
+  border: none; // Sem borda
+  padding: 5px 10px; // Padding
+  font-size: 15px; // Tamanho da fonte
+  cursor: pointer; // Cursor de ponteiro ao passar o mouse
+
+
+  // Efeitos de hover e focus
+  &:hover {
+    background: #ffffff;
+    color: black;
+  }
+
+  &:focus {
+    outline: none;
+    // box-shadow: 0 0 0 3px rgba(188, 251, 35, 0.5);
+  }
+}
