@@ -5,4 +5,11 @@ class PagesController < ApplicationController
     @games = Game.all
   end
 
+  def about
+
+  end
+  def dashboard
+
+  end
+
 end
