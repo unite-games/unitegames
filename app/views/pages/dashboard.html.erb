@@ -1,0 +1,18 @@
+<div class="d-flex container my-5 w-50 flex-column text-center">
+ <div><%= cl_image_tag current_user.photo.key, id:"dash-img" %> </div>
+  <h1>Hello, <%= current_user.name %>!</h1>
+  <h3>Your sales details:</h3>
+
+
+  <% total = 0 %>
+  <% counter = 0 %>
+  <% current_user.transactions.each do |t|%>
+  <% total += t.game.price %>
+  <% counter += 1 %>
+  <% end %>
+
+  <h2>You sold <%= counter %> items</h2>
+  <h2>Summing up £<%= total %> </h2>
+
+
+</div>

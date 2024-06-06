@@ -3,7 +3,7 @@
  <h3><%= @game.price %></h3>
  <p><%= @game.category %></p>
  <p>Seller: <%= @game.user.name %></p>
-  <%= cl_image_tag @game.photo.key, class:"image" %>
+  <%= cl_image_tag @game.photo.key, class:"image" if @game.photo.attached? %>
   <br>
   <br>
   <%= link_to "Return to the main page", root_path%>
