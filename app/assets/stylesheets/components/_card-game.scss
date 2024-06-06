@@ -1,41 +1,45 @@
-.card-trip {
+.card-game {
   overflow: hidden;
   background: #000000;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   width:275px;
-  margin: 50px 20px;
-  border: #ffffff solid 1px;
-  border-radius: 3px;
+  margin: 20px 20px;
+  border-radius: 5px;
   }
 
-.card-trip > img {
+.card-game > img {
   height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-game h2 {
   font-size: 16px;
   font-weight: bold;
   margin: auto;
 }
 
-.card-trip p {
+.card-game p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
+#price {
+  color: greenyellow;
+  font-size: 20px;
+}
 
-.card-trip .card-trip-infos {
+
+.card-game .card-game-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items:center;
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-game-infos .card-game-user {
   position: absolute;
   right: 16px;
   top: -20px;
