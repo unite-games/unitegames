@@ -1,4 +1,4 @@
-<div class="container w-25 my-5">
+<div class="container w-25 py-5">
 
   <h2>Log in</h2>
 
@@ -17,17 +17,10 @@
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
-<<<<<<< HEAD
-    <div class="form-actions">
-      <%= f.button :submit, "Log in", class:"button-form"  %>
-    </div>
-  <% end %>
-=======
   <div class="form-actions">
     <%= f.button :submit, "Log in", class:"button-custom"%>
   </div>
 <% end %>
->>>>>>> master
 
   <%= render "devise/shared/links" %>
 </div>
