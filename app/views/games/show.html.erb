@@ -1,6 +1,6 @@
 <div class="container w-50 my-5">
  <h1><%= @game.title %></h1>
- <h3><%= @game.price %></h3>
+ <h3>R$ <%= @game.price %></h3>
  <p><%= @game.category %></p>
  <p>Seller: <%= @game.user.name %></p>
   <%= cl_image_tag @game.photo.key, class:"image" if @game.photo.attached? %>
