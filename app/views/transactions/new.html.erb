@@ -1,20 +1,81 @@
-<h1>Let's pay</h1>
-<h3>To purchase your game please fill the fields below.</h3>
-
+<div class="d-flex container my-5">
 
 <div class="card-details">
+<h1>Let's pay</h1>
+<h3>To purchase your game please fill the fields below.</h3>
+ <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Credit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Debit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="paypal">Paypal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is required
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                  Credit card number is required
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+
 <%= simple_form_for [@game, @transaction] do |f| %>
   <%= f.button :submit, value: "PAY", class:"button-custom"%>
 <% end %>
 
 </div>
+<div class="d-flex mx-5" style="height: 400px; color:white;">
+  <div class="vr"></div>
+  <div class="vr"></div>
+  <div class="vr"></div>
+</div>
 
-
-
-<div class="price-details"></div>
-<p><%= @game.title %> <%= @game.price %></p>
-<p>Discounts & Offers</p>
-<p>Tax</p>
-<p>Total <%= @game.price %></p>
-
+<div class="flex-column w-25 my-5">
+<div class="flex-row d-flex justify-content-between">
+  <p><%= @game.title %></p>
+  <p> <%= @game.price %></p>
+</div>
+<div class="flex-row d-flex justify-content-between">
+  <p>Discounts & Offers</p>
+  <p>0</p>
+</div>
+<div class="flex-row d-flex justify-content-between">
+  <p>Tax</p>
+  <p>o</p>
+</div>
+  <p>______________________________________</p>
+  <p>Total <%= @game.price %></p>
+</div>
 </div>
