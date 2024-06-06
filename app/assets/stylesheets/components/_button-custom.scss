@@ -1,0 +1,25 @@
+.button-all {
+  background-color: greenyellow;
+  color: #111010;
+}
+
+.button-custom {
+  background: linear-gradient(to right, #BCFB23, #A3E635); // Degradê
+  color: #0c0c0c; // Texto preto
+  border-radius: 5px; // Borda arredondada
+  border: none; // Sem borda
+  padding: 5px 10px; // Padding
+  font-size: 15px; // Tamanho da fonte
+  cursor: pointer; // Cursor de ponteiro ao passar o mouse
+
+  // Efeitos de hover e focus
+  &:hover {
+    background: linear-gradient(to right, #A3E635, #BCFB23);
+    color: black;
+  }
+
+  &:focus {
+    outline: none;
+    // box-shadow: 0 0 0 3px rgba(188, 251, 35, 0.5);
+  }
+}
