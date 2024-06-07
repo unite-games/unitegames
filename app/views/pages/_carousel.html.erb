@@ -1,21 +1,23 @@
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag 'image1.png', class: "d-block w-100" %>
+<div class="min-vh-100">
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner h-75">
+      <div class="carousel-item active">
+        <%= image_tag 'cs.jpg', class: "d-block w-100"%>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'fifa.png', class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'slide2.jpg', class: "d-block w-100" %>
+      </div>
     </div>
-    <div class="carousel-item">
-      <%= image_tag 'image2.png', class: "d-block w-100" %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'image3.png', class: "d-block w-100" %>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="false"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="false"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
