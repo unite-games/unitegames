@@ -3,6 +3,10 @@ class PagesController < ApplicationController
 
   def home
     @games = Game.all
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query OR category ILIKE :query"
+      @games = @games.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def about
