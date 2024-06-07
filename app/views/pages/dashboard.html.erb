@@ -1,27 +1,46 @@
-<div class="d-flex container py-5 w-50 flex-column text-center">
-  <div>
-  <% if user_signed_in? %>
-      <% if current_user.photo.attached?%>
-      <%= cl_image_tag current_user.photo.key, id: "dash-img"%>
-      <% else %>
-      <%= image_tag "user.jpg", id: "dash-img" %>
-      <% end %>
+
+
+<div class="d-flex flex-row">
+  <div class="d-flex container py-5 w-50 flex-column text-center">
+    <div>
+    <% if user_signed_in? %>
+        <% if current_user.photo.attached?%>
+        <%= cl_image_tag current_user.photo.key, id: "dash-img"%>
+        <% else %>
+        <%= image_tag "user.jpg", id: "dash-img" %>
+        <% end %>
+    <% end %>
+  </div>
+
+    <h1>Hello, <%= current_user.name %>!</h1>
+    <h3>Your sales details:</h3>
+
+
+    <% total = 0 %>
+    <% counter = 0 %>
+    <% current_user.transactions.each do |t|%>
+    <% total += t.game.price %>
+    <% counter += 1 %>
+    <% end %>
+
+    <h2>You sold <%= counter %> items</h2>
+    <h2>Summing up R$ <%= total %> </h2>
+
+  </div class="d-flex flex-row">
+    <div class="d-flex p-5" style="height: 600px; color:white;">
+      <div class="vr"></div>
+      <div class="vr"></div>
+      <div class="vr"></div>
+      <div class="vr"></div>
+      <div class="vr"></div>
+    </div>
+    <div>
+
+  <div class="games-bought p-5">
+  <h3>The games you sold:</h3>
+  <% current_user.transactions.each do |t| %>
+  <a href=""><%= cl_image_tag t.game.photo.key, width:"100", height:"75", class:"m-1"%></a>
   <% end %>
+  </div>
 </div>
-
-  <h1>Hello, <%= current_user.name %>!</h1>
-  <h3>Your sales details:</h3>
-
-
-  <% total = 0 %>
-  <% counter = 0 %>
-  <% current_user.transactions.each do |t|%>
-  <% total += t.game.price %>
-  <% counter += 1 %>
-  <% end %>
-
-  <h2>You sold <%= counter %> items</h2>
-  <h2>Summing up R$ <%= total %> </h2>
-
-
 </div>
